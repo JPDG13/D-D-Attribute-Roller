@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>DND Stat Roller</title>
+</head>
+  
+    <body>
+       <section class="top">
+         <div class="top-race">
+           <h3>Race</h3>
+            <select class="choose-race" id="choose-race" onChange="raceSubrace()">
+              <option value="select" id="select">- Select -</option>
+          
+           </select>
+             
+         </div>
+         <div class="top-race">
+            <h3>Subrace</h3> 
+            <select class="subrace" id="subrace">
+              <option value="Human">----------</option>
+
+           </select>
+         </div>
+        <div>
+             <h1>Dungeons &amp; Dragons <br> Attribute Calculator</h1>
+        </div>
+          
+       </section>
+      <!-- <section class="type">
+          <div class="roll btn">
+               Roll for Stats
+            </div>
+           
+           <div class="point-buy btn">
+               Point Buy
+           </div>
+       </section> 
+       
+        <section >
+            <div class="race btn">Race</div>
+            <div class="subrace btn">Subrace</div>
+        </section>
+        <br> -->
+        <section class="main-body">
+            <div class="attributes">
+                <div class="rolls col-1">
+                    <h3>Attributes</h3>
+                    <ul>
+                        <li class="str">STR: &nbsp;<p id="str-roll"></p></li>
+                        <li class="dex">DEX: &nbsp;<p id="dex-roll"></p></li>
+                        <li class="con">CON: &nbsp;<p id="con-roll"></p></li>
+                        <li class="int">INT: &nbsp;<p id="int-roll"></p></li>
+                        <li class="wis">WIS: &nbsp;<p id="wis-roll"></p></li>
+                        <li class="cha">CHA: &nbsp;<p id="cha-roll"></p></li>
+                    </ul>
+                </div>
+                <div class="bonuses col-1">
+                    <h3>Racial Bonus</h3>
+                    <ul>
+                        <li><p id="str-bonus"></p></li>
+                        <li><p id="dex-bonus"></p></li>
+                        <li><p id="con-bonus"></p></li>
+                        <li><p id="int-bonus"></p></li>
+                        <li><p id="wis-bonus"></p></li>
+                        <li><p id="cha-bonus"></p></li>
+                      
+                    </ul>
+                </div>
+                <div class="total col-1">
+                    <h3>Total Scores</h3>
+                    <ul>
+                        <li class="str-total">STR: &nbsp;</li>
+                        <li class="dex-total">DEX: &nbsp;</li>
+                        <li class="con-total">CON: &nbsp;</li>
+                        <li class="int-total">INT: &nbsp;</li>
+                        <li class="wis-total">WIS: &nbsp;</li>
+                        <li class="cha-total">CHA: &nbsp;</li>
+                    </ul>
+                </div>
+                  <div class="features">
+                <h3>Racial Features</h3>
+                <ul class="racial-features">
+                    <li id="score-increase">ABILITY SCORE INCREASE:</li>
+                    <br>
+                    <li id="features"></li>
+                    <br>
+                    <li id="age">AGE:</li>
+                    <br>
+                    <li id="alignment">ALIGNMENT:</li>
+                    <br>
+                    <li id="size">SIZE:</li>
+                    <br>
+                    <li id="speed">SPEED:</li>
+                    <br>
+                    <li id="languages">LANGUAGES:</li>
+                    <br>
+                    
+                </ul>
+            </div>
+            </div>
+
+         
+        </section>   
+       <!-- <footer>
+            Dungeons &amp; Dragons fan art generously provided and approved by Wizards of the Coast &copy;  Fan Site Package
+        </footer> -->
+    <script src="main.js"></script> 
+    </body>
+</html>
+
+
+<!--
+ 
+  
+   
+     -->

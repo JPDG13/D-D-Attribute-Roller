@@ -1,0 +1,86 @@
+body {
+    background: #000; /*; linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.70)), url(DnD_Starter_Art.jpg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: Tahoma, sans-serif;
+    height: 100vh;
+    overflow: inherit;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    letter-spacing: 0.8px;
+    
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 2fr 2fr 4fr;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.top-race {
+    padding-top: 2rem;
+    padding-left: 270px;
+}
+
+h1 {
+    letter-spacing: 3px;
+}
+
+.top h3 {
+    margin-bottom: 0;
+}
+
+/*.type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+} */
+
+/* .subrace {
+    display: none;
+} */
+
+.choose-race,
+.subrace { 
+    width: inherit;
+}
+
+.main-body {
+    padding-left: 200px
+}
+
+.attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 4fr;
+}
+
+.col-1 p {
+    display: inline-block;
+    margin: 0;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    /* list-style-type: none; */
+    
+}
+
+.racial-features {
+    padding-right: 200px; 
+}
+
+footer {
+    
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:5px;   /* Height of the footer */
+    font-size: 1rem;
+    text-align: center;
+}
