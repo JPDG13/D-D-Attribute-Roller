@@ -28,63 +28,87 @@
         </div>
           
        </section>
-      <!-- <section class="type">
-          <div class="roll btn">
-               Roll for Stats
-            </div>
-           
-           <div class="point-buy btn">
-               Point Buy
-           </div>
-       </section> 
        
-        <section >
-            <div class="race btn">Race</div>
-            <div class="subrace btn">Subrace</div>
-        </section>
-        <br> -->
         <section class="main-body">
-            <div class="attributes">
-                <div class="rolls col-1">
-                    <h3>Attributes</h3>
-                    <ul>
-                        <li class="str">STR: &nbsp;<p id="str-roll"></p></li>
-                        <li class="dex">DEX: &nbsp;<p id="dex-roll"></p></li>
-                        <li class="con">CON: &nbsp;<p id="con-roll"></p></li>
-                        <li class="int">INT: &nbsp;<p id="int-roll"></p></li>
-                        <li class="wis">WIS: &nbsp;<p id="wis-roll"></p></li>
-                        <li class="cha">CHA: &nbsp;<p id="cha-roll"></p></li>
-                    </ul>
-                </div>
-                <div class="bonuses col-1">
-                    <h3>Racial Bonus</h3>
-                    <ul>
-                        <li><p id="str-bonus"></p></li>
-                        <li><p id="dex-bonus"></p></li>
-                        <li><p id="con-bonus"></p></li>
-                        <li><p id="int-bonus"></p></li>
-                        <li><p id="wis-bonus"></p></li>
-                        <li><p id="cha-bonus"></p></li>
-                      
-                    </ul>
-                </div>
-                <div class="total col-1">
-                    <h3>Total Scores</h3>
-                    <ul>
-                        <li class="str-total">STR: &nbsp;</li>
-                        <li class="dex-total">DEX: &nbsp;</li>
-                        <li class="con-total">CON: &nbsp;</li>
-                        <li class="int-total">INT: &nbsp;</li>
-                        <li class="wis-total">WIS: &nbsp;</li>
-                        <li class="cha-total">CHA: &nbsp;</li>
-                    </ul>
-                </div>
-                  <div class="features">
+        
+        <div class="table-and-buttons">  
+          
+                <table style="width:50%">
+                  <tr>
+                    <th>Attributes</th>
+                    <th>Roll</th>
+                    <th></th>
+                    <th>Bonus</th>
+                    <th></th> 
+                    <th>Total</th>
+                  </tr>
+                  <tr>
+                    <td>STR</td>
+                    <td id="str-roll"></td>
+                    <td>+</td> 
+                    <td id="str-bonus"></td>
+                    <td>=</td>
+                    <td id="str-total"></td>
+                  </tr>
+                 <tr>
+                    <td>DEX</td>
+                    <td id="dex-roll"></td> 
+                    <td>+</td> 
+                    <td id="dex-bonus"></td>
+                    <td>=</td>
+                    <td id="dex-total"></td>
+                  </tr>          <tr>
+                    <td>CON</td>
+                    <td id="con-roll"></td> 
+                    <td>+</td> 
+                    <td id="con-bonus"></td>
+                    <td>=</td>
+                    <td id="con-total"></td>
+                  </tr>          
+                   <tr>
+                    <td>INT</td>
+                    <td id="int-roll"></td> 
+                    <td>+</td> 
+                    <td id="int-bonus"></td>
+                    <td>=</td>
+                    <td id="int-total"></td>
+                  </tr>
+                   <tr>
+                    <td>WIS</td>
+                    <td id="wis-roll"></td> 
+                    <td>+</td> 
+                    <td id="wis-bonus"></td>
+                    <td>=</td>
+                    <td id="wis-total"></td>
+                  </tr>
+                   <tr>
+                    <td>CHA</td>
+                    <td id="cha-roll"></td> 
+                    <td>+</td> 
+                    <td id="cha-bonus"></td>
+                    <td>=</td>
+                    <td id="cha-total"></td>
+                  </tr>
+             </table>    
+        <div class="buttons">
+            
+        </div>
+            <div class="button">
+                <button id="3d6-no-ones">3d6 Reroll<br>Ones</button>
+            </div>
+            <div class="button">
+                <button id="3d6-only">3d6<br>Straight<br>&nbsp;</button>
+            </div>   
+            <div class="button">
+                <button id="point-buy">Point<br>Buy <br>&nbsp; </button>
+            </div>  
+        </div>
+        <br>
+       
+            <div class="features">
                 <h3>Racial Features</h3>
                 <ul class="racial-features">
                     <li id="score-increase">ABILITY SCORE INCREASE:</li>
-                    <br>
-                    <li id="features"></li>
                     <br>
                     <li id="age">AGE:</li>
                     <br>
@@ -96,23 +120,130 @@
                     <br>
                     <li id="languages">LANGUAGES:</li>
                     <br>
-                    
+                    <li id="features"></li>
+                    <br>
                 </ul>
             </div>
-            </div>
-
-         
         </section>   
-       <!-- <footer>
-            Dungeons &amp; Dragons fan art generously provided and approved by Wizards of the Coast &copy;  Fan Site Package
-        </footer> -->
+        <footer>
+            <!-- Dungeons &amp; Dragons fan art generously provided and approved by Wizards of the Coast &copy;  Fan Site Package -->
+        </footer> 
     <script src="main.js"></script> 
     </body>
 </html>
 
 
-<!--
+
+
+<!-- 
+
+<table id="dragon">
+   <tr>
+    <th> &nbsp;Draconic Ancestry &nbsp;</th>
+    <th> &nbsp; Damage Type &nbsp;</th>
+    <th> &nbsp;Breath Weapon &nbsp;</th>
+    <th> &nbsp; Save &nbsp; </th> 
+   </tr>
+   <tr>
+    <td>Black</td>
+    <td>Acid</td>
+    <td>5 x 30 ft. line</td>
+    <td>Dex</td>  
+   </tr>
+   <tr>
+    <td>Blue</td>
+    <td>Lightning</td>
+    <td>5 x 30 ft. line</td>
+    <td>Dex</td>
+   </tr>
+    <tr>
+     <td>Brass</td>
+     <td>Fire</td>
+     <td>5 x 30 ft. line</td>
+     <td>Dex</td>
+    </tr>
+    <tr>
+     <td>Bronze</td>
+     <td>Lightning</td>
+     <td>5 x 30 ft. line</td>
+     <td>Dex</td>
+    </tr>
+    <tr>
+     <td>Copper</td>
+     <td>Acid</td>
+     <td>5 x 30 ft. line</td>
+     <td>Dex</td>
+    </tr>
+    <tr>
+     <td>Gold</td>
+     <td>Fire</td>
+     <td>15 ft. cone</td>
+     <td>Dex</td>
+    </tr>
+    <tr>
+     <td>Green</td>
+     <td>Poison</td>
+     <td>15 ft. cone</td>
+     <td>Con</td>
+    </tr>       
+    <tr>
+     <td>Red</td>
+     <td>Fire</td>
+     <td>15 ft. cone</td>
+     <td>Dex</td>
+    </tr> 
+    <tr>
+     <td>Silver</td>
+     <td>Cold</td>
+     <td>15 ft. cone</td>
+     <td>Con</td>
+    </tr> 
+    <tr>
+     <td>White</td>
+     <td>Cold</td>
+     <td>15 ft. cone</td>
+     <td>Con</td>
+    </tr> 
+</table>
+<br>
+
+ -->
  
   
-   
-     -->
+                    
+           <!-- <div class="attributes">
+                <div class="rolls col-1">
+                    <h3>Attributes</h3>
+                    <ul>
+                        <li class="str">STR: &nbsp;<p ></p></li>
+                        <li class="dex">DEX: &nbsp;<p ></p></li>
+                        <li class="con">CON: &nbsp;<p ></p></li>
+                        <li class="int">INT: &nbsp;<p ></p></li>
+                        <li class="wis">WIS: &nbsp;<p ></p></li>
+                        <li class="cha">CHA: &nbsp;<p ></p></li>
+                    </ul>
+                </div>
+                <div class="bonuses col-1">
+                    <h3>Racial Bonus</h3>
+                    <ul>
+                        <li><p id="str-bonus"></p></li>
+                        <li><p id="dex-bonus"></p></li>
+                        <li><p id="con-bonus"></p></li>
+                        <li><p id="int-bonus"></p></li>
+                        <li><p id="wis-bonus"></p></li>
+                        <li><p ></p></li>
+                      
+                    </ul>
+                </div>
+                <div class="total col-1">
+                    <h3>Total Scores</h3>
+                    <ul>
+                        <li class=>STR: &nbsp;</li>
+                        <li class="dex-total">DEX: &nbsp;</li>
+                        <li class="con-total">CON: &nbsp;</li>
+                        <li class="int-total">INT: &nbsp;</li>
+                        <li class="wis-total">WIS: &nbsp;</li>
+                        <li class="cha-total">CHA: &nbsp;</li>
+                    </ul>
+                </div>
+            </div> -->

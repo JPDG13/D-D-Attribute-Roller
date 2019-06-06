@@ -1,30 +1,36 @@
 body {
-    background: #000; /*; linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.70)), url(DnD_Starter_Art.jpg); */
-    background-size: cover;
+    background: #000; /*; linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.70)), url(castle.jpeg); */
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
+    top: 30%;
     color: #fff;
-    font-family: Tahoma, sans-serif;
+    font-family: Arial, sans-serif;
     height: 100vh;
     overflow: inherit;
-    line-height: 1.8;
+    line-height: 1.6;
     font-size: 1.2rem;
     letter-spacing: 0.8px;
-    
 }
 
 .top {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.70)), url(castle.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: grid;
     grid-template-columns: 2fr 2fr 4fr;
     text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    margin: 100px 300px 50px 300px;
+  
+ 
 }
 
 .top-race {
-    padding-top: 2rem;
-    padding-left: 270px;
-}
+    text-align: center;
+    align-content: center;
+    padding-top: 1rem;
+  }
 
 h1 {
     letter-spacing: 3px;
@@ -34,28 +40,53 @@ h1 {
     margin-bottom: 0;
 }
 
-/*.type {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-} */
-
-/* .subrace {
-    display: none;
-} */
-
 .choose-race,
 .subrace { 
     width: inherit;
 }
 
 .main-body {
-    padding-left: 200px
+    padding-left: 300px;
+    padding-right: 300px;
+    position: relative;
 }
 
-.attributes {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 4fr;
+.table-and-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    width: 120px;
+    height: auto;
+    border:3px solid #888;
+    border-radius: 50%;
+    color: #888;
+    padding: 25px;
+    background: 000;
+    font-size: 1.2rem;
+}
+
+button:focus {
+    border:3px solid #fff;
+    transition: 0.7s;
+    color: #fff;
+    background: #222;
+}
+
+button:hover {
+    border:3px solid #fff;
+    color: #fff;
+    transition: 0.7s;
+} 
+
+
+.button {
+    padding: 80px 15px;
+    background-color: 000;
+    margin-left: 50px;
+
 }
 
 .col-1 p {
@@ -67,12 +98,20 @@ h1 {
 ul {
     margin: 0;
     padding: 0;
-    /* list-style-type: none; */
+    list-style-type: circle;
     
 }
 
-.racial-features {
-    padding-right: 200px; 
+table, th, td {
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+
+.features {
+    text-align: left;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 footer {
