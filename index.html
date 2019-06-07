@@ -32,15 +32,15 @@
         <section class="main-body">
         
         <div class="table-and-buttons">  
-          
                 <table style="width:50%">
                   <tr>
-                    <th>Attributes</th>
-                    <th>Roll</th>
-                    <th></th>
-                    <th>Bonus</th>
-                    <th></th> 
-                    <th>Total</th>
+                    <th class="large-size-col">Attributes</th>
+                  
+                    <th class="mid-size-col">Initial</th>
+                    <th class="small-size-col"></th>
+                    <th class="mid-size-col">Bonus</th>
+                    <th class="small-size-col"></th> 
+                    <th class="mid-size-col">Total</th>
                   </tr>
                   <tr>
                     <td>STR</td>
@@ -67,7 +67,7 @@
                   </tr>          
                    <tr>
                     <td>INT</td>
-                    <td id="int-roll"></td> 
+                    <td id="int-roll"></td>
                     <td>+</td> 
                     <td id="int-bonus"></td>
                     <td>=</td>
@@ -90,9 +90,8 @@
                     <td id="cha-total"></td>
                   </tr>
              </table>    
-        <div class="buttons">
-            
-        </div>
+           
+       
             <div class="button">
                 <button id="3d6-no-ones">3d6 Reroll<br>Ones</button>
             </div>
@@ -100,9 +99,14 @@
                 <button id="3d6-only">3d6<br>Straight<br>&nbsp;</button>
             </div>   
             <div class="button">
-                <button id="point-buy">Point<br>Buy <br>&nbsp; </button>
-            </div>  
+                <button id="point-buy-button" input="enabled">Point<br>Buy <br>&nbsp; </button>
+            </div>          
+           
+    
+
         </div>
+        <br>
+         <div class="pb-number-change">Point Buy Total: </div>
         <br>
        
             <div class="features">

@@ -15,35 +15,39 @@ var racialInt = 0;
 var racialWis = 0;
 var racialCha = 0;
 
-//Pseudo Code:
-// Click selector to choose a different race.
-    // DONE
-// Display racial features and bonuses
-    // DONE!
-    // DONE: Figure out how to clear the data when changing races!
-// Click button to roll stats.
-    // DONE! Create the buttons.
-    // DONE! Make the on-click event.  
-// DONE!  Add stuff together.  
-// Possible save stats for later?
+document.getElementById("str-roll").innerHTML = '--'
+document.getElementById("dex-roll").innerHTML = '--'
+document.getElementById("con-roll").innerHTML = '--'
+document.getElementById("int-roll").innerHTML = '--'
+document.getElementById("wis-roll").innerHTML = '--'
+document.getElementById("cha-roll").innerHTML = '--'
+
+function clearTotals() {
+    
+    racialStr = 0;
+    racialDex = 0;
+    racialCon = 0;
+    racialInt = 0;
+    racialWis = 0;
+    racialCha = 0;
+}
 
 function clearFeatures (){
     
-        document.getElementById("str-bonus").innerHTML = '';
-        document.getElementById("dex-bonus").innerHTML = '';
-        document.getElementById("con-bonus").innerHTML = '';
-        document.getElementById("int-bonus").innerHTML = '';
-        document.getElementById("wis-bonus").innerHTML = '';
-        document.getElementById("cha-bonus").innerHTML = '';
-        document.getElementById("score-increase").textContent = 'ABILITY SCORE INCREASE: ';
-        document.getElementById("age").textContent = 'AGE: ';
-        document.getElementById("alignment").textContent = 'ALIGNMENT: ';
-        document.getElementById("size").textContent = 'SIZE: ';
-        document.getElementById("speed").textContent = 'SPEED: ';
-        document.getElementById("languages").textContent = 'LANGUAGES: ';
-        document.getElementById("features").textContent = ''; // TODO, ADD TABLE
+    document.getElementById("str-bonus").innerHTML = '';
+    document.getElementById("dex-bonus").innerHTML = '';
+    document.getElementById("con-bonus").innerHTML = '';
+    document.getElementById("int-bonus").innerHTML = '';
+    document.getElementById("wis-bonus").innerHTML = '';
+    document.getElementById("cha-bonus").innerHTML = '';
+    document.getElementById("score-increase").textContent = 'ABILITY SCORE INCREASE: ';
+    document.getElementById("age").textContent = 'AGE: ';
+    document.getElementById("alignment").textContent = 'ALIGNMENT: ';
+    document.getElementById("size").textContent = 'SIZE: ';
+    document.getElementById("speed").textContent = 'SPEED: ';
+    document.getElementById("languages").textContent = 'LANGUAGES: ';
+    document.getElementById("features").textContent = ''; // TODO, ADD TABLE
 }
-
 
 // Click to roll stats, no 1's.  
 document.getElementById("3d6-no-ones").addEventListener("click", function() {
@@ -70,7 +74,6 @@ function statRollIgnoreOnes () {
     return attribute;
  };  
 
-
 // Click for stat Roll of 3d6 straight
 document.getElementById("3d6-only").addEventListener("click", function() {
     
@@ -84,7 +87,6 @@ document.getElementById("3d6-only").addEventListener("click", function() {
     initialRoll();
 });
 
-
 function statRoll () {
  
     var roll_0, roll_1, roll_2, attribute;
@@ -97,6 +99,45 @@ function statRoll () {
     return attribute;
     };
 
+
+// Displays HTML input fields in place of the dice rolls. 
+document.getElementById("point-buy-button").addEventListener("click", function() {
+    
+    document.getElementById("str-roll").innerHTML =' <input class="point-buy-input" id="str-input" type="number" min="8" max="15" value="8" onchange="totalPointBuy()"/>';
+    document.getElementById("dex-roll").innerHTML =' <input class="point-buy-input" id="dex-input" type="number" min="8" max="15" value="8" onchange="totalPointBuy()"/>';
+    document.getElementById("con-roll").innerHTML =' <input class="point-buy-input" id="con-input" type="number" min="8" max="15" value="8" onchange="totalPointBuy()"/>';
+    document.getElementById("int-roll").innerHTML =' <input class="point-buy-input" id="int-input" type="number" min="8" max="15" value="8" onchange="totalPointBuy()"/>';
+    document.getElementById("wis-roll").innerHTML =' <input class="point-buy-input" id="wis-input" type="number" min="8" max="15" value="8" onchange="totalPointBuy()"/>';
+    document.getElementById("cha-roll").innerHTML =' <input class="point-buy-input" id="cha-input" type="number" min="8" max="15" value="8" onchange="totalPointBuy()"/>';
+    
+    totalPointBuy();
+
+
+});
+
+function totalPointBuy () {
+    
+    str =  parseInt((document.getElementById("str-input").value));
+    dex =  parseInt((document.getElementById("dex-input").value));
+    con =  parseInt((document.getElementById("con-input").value));
+    int =  parseInt((document.getElementById("int-input").value));
+    wis =  parseInt((document.getElementById("wis-input").value));
+    cha =  parseInt((document.getElementById("cha-input").value));
+    
+    totalRoll();
+    
+    /* Point-Buy Addition
+    8 = 0
+    9 = 1
+    10 = 2
+    11 = 3
+    12 = 4
+    13 = 5
+    14 = 7
+    15 = 9
+    */
+    
+}
 
 // Displays initial rolls in HTML
 function initialRoll () {
@@ -227,8 +268,6 @@ var tieflingSize = ' Tieflings are about the same size and build as humans. Your
 var tieflingLanguages = ' You can speak, read, and write Common and Infernal.';
 var tieflingFeatures= '<li>DARKVISION: Thanks to your infernal heritage, you have superior vision in dark and dim conditions. ' + darkVision + '</li><br><li>HELLISH RESISTANCE: You have resistance to fire damage.</li><br><li>INFERNAL LEGACY: You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.</li>';
 
-        
- 
 function raceSubrace () { 
     
     var race = document.getElementById('choose-race');
@@ -248,6 +287,8 @@ function raceSubrace () {
     race.options[9] = new Option('Tiefling');
     
     if (listRace === 'Dragonborn') {
+        
+        clearTotals();
         
         racialCha = 1;
         racialStr = 2;
@@ -269,6 +310,8 @@ function raceSubrace () {
   
     } else if (listRace === 'Dwarf') {
         
+        clearTotals();
+        
         racialCon = 2;
         racialWis = 1;
         totalRoll();
@@ -287,9 +330,11 @@ function raceSubrace () {
         document.getElementById("speed").textContent += speed25 + dwarfSpeed;
         document.getElementById("languages").textContent += dwarfLanguages;
         document.getElementById("features").innerHTML += dwarfFeatures;
-
        
     } else if (listRace === 'Elf') {
+        
+        clearTotals();    
+        
         racialDex = 2;
         racialInt = 1;
         totalRoll();
@@ -315,6 +360,9 @@ function raceSubrace () {
 
        
     } else if (listRace === 'Gnome') {
+        
+        clearTotals();
+        
         racialCon = 1;
         racialInt = 2;
         totalRoll();
@@ -337,6 +385,9 @@ function raceSubrace () {
 
     
     } else if (listRace === 'Halfling') {
+        
+        clearTotals();
+        
         racialDex =  2;
         racialCha = 1;
         totalRoll();
@@ -357,8 +408,10 @@ function raceSubrace () {
         document.getElementById("languages").textContent += halflingLanguages;
         document.getElementById("features").innerHTML += halflingFeatures;
 
-
     } else if (listRace === 'Half-Elf') {
+        
+        clearTotals()
+        
         racialCha = 2;
         totalRoll();
         
@@ -378,6 +431,9 @@ function raceSubrace () {
 
         
     } else if (listRace === 'Half-Orc') {
+        
+        clearTotals();
+        
         racialStr = 2;
         racialCon = 1;
         totalRoll();
@@ -399,11 +455,14 @@ function raceSubrace () {
 
         
     } else if (listRace === 'Human') {
-        raicalStr = 1;
+        
+        clearTotals();
+        
+        racialStr = 1;
         racialDex = 1;
         racialCon = 1;
         racialInt = 1;
-        raicalWis = 1;
+        racialWis = 1;
         racialCha = 1;
         totalRoll();
         
@@ -430,6 +489,9 @@ function raceSubrace () {
 
               
     } else if (listRace === 'Tiefling') {
+        
+        clearTotals();
+        
         racialCha = 2;
         racialInt = 1;
         totalRoll();
@@ -454,5 +516,15 @@ function raceSubrace () {
 
 raceSubrace(); 
 
-
+//Pseudo Code:
+// Click selector to choose a different race.
+    // DONE
+// Display racial features and bonuses
+    // DONE!
+    // DONE: Figure out how to clear the data when changing races!
+// Click button to roll stats.
+    // DONE! Create the buttons.
+    // DONE! Make the on-click event.  
+// DONE!  Add stuff together.  
+// Possible save stats for later?
 

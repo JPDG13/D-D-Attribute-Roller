@@ -42,7 +42,12 @@ h1 {
 
 .choose-race,
 .subrace { 
-    width: inherit;
+    width: 120px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    
+    
 }
 
 .main-body {
@@ -51,9 +56,50 @@ h1 {
     position: relative;
 }
 
+.pb-number-change {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #888;
+   
+}
+
+
 .table-and-buttons {
     display: flex;
     flex-direction: row;
+    padding-left: 50px;
+} 
+
+/* .table-and-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2;
+    padding-left: 50px;
+} */
+
+tr {
+    height: 36px;
+}
+
+.large-size-col {
+    width: 140px;
+}
+
+.mid-size-col {
+    width: 100px;
+}
+
+.small-size-col {
+    width: 35px;
+}
+
+.point-buy-input {
+    width: 35px;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: #404040;
+    
 }
 
 button {
@@ -83,7 +129,7 @@ button:hover {
 
 
 .button {
-    padding: 80px 15px;
+    padding: 80px 10px;
     background-color: 000;
     margin-left: 50px;
 
@@ -105,6 +151,8 @@ ul {
 table, th, td {
     border: 1px solid #fff;
     text-align: center;
+    padding-left: 
+    
 }
 
 
